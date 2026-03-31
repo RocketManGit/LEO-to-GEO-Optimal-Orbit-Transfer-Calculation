@@ -29,14 +29,14 @@ from visualization import plot_transfer, plot_pareto_front, plot_pareto_orbits
 # MISSION PARAMETERS — edit these
 # ══════════════════════════════════════════════════════════════════════════════
 
-ALT1_KM            = 400       # Departure orbit altitude [km]  (e.g. ISS-like LEO)
-ALT2_KM            = 35786     # Target   orbit altitude [km]  (GEO)
+ALT1_KM            = int(input("Enter LEO Altitude (km): "))       # Departure orbit altitude [km]  (e.g. ISS-like LEO)
+ALT2_KM            = int(input("Enter GEO Altitude (km): "))       # Target   orbit altitude [km]  (GEO)
 
-SPACECRAFT_MASS_KG = 5000      # Wet mass — spacecraft + full propellant load [kg]
-ENGINE_ISP_S       = 311       # Specific impulse [s]  (hypergolic, e.g. R-4D)
+SPACECRAFT_MASS_KG = int(input("Enter Spacecraft Wet Mass (kg): "))        # Wet mass — spacecraft + full propellant load [kg]
+ENGINE_ISP_S       = int(input("Enter Specific Impulse (s): "))         # Specific impulse [s]  (hypergolic, e.g. R-4D)
 
-N_PARETO_POINTS    = 60        # Pareto front resolution (more = smoother curve)
-R_APO_MAX_FACTOR   = 8.0       # Optimizer search ceiling: r_apo ≤ r2 * this
+N_PARETO_POINTS    = int(input("Enter # Pareto Points: "))          # Pareto front resolution (more = smoother curve)
+R_APO_MAX_FACTOR   = int(input("Enter Max Apoapsis factor relative to current Apoapsis: "))         # Optimizer search ceiling: r_apo ≤ r2 * this
 
 
 # ══════════════════════════════════════════════════════════════════════════════
